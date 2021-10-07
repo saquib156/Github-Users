@@ -50,8 +50,8 @@ const Home = () => {
 
             <div className="users-div">
                 {storeData.map((user) => (
-                    <Link to={`/${user.id}`}>
-                        <div className="user-block" key={user.id}>
+                    <Link to={`/user/${user.login}`} key={user.id}>
+                        <div className="user-block">
                             <img src={user.avatar_url} width="300" height="300" alt="Profile Pic" />
                             <div className="user-title">{user.name ? user.name : user.login}</div>
                         </div>
